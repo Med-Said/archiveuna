@@ -59,6 +59,11 @@ body
     border: 1px solid #000000;
 }
 
+#divNavLevel
+{
+    margin: 7px;
+}
+
 #sectionContent
 {
     border: 1px solid black;
@@ -66,10 +71,28 @@ body
     width: 70%;
     box-sizing: border-box;
     position: absolute;
+    margin-top: 70px;
 }
 
 #divMatiere
 {
     border: 1px snow solid;
+    position: relative;
+    width: 30%;
+    margin: 7px 0px 7px 7px;
+    border-radius: 7px;
 }
 
+#divImage
+{
+    border: 1px solid #C90F0F;
+    position: relative;
+    width: 70%;
+    box-sizing: border-box;
+    margin-left: 30%;
+}
+
+img
+{
+    position: static;
+}

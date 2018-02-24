@@ -20,7 +20,7 @@
         </nav>
     </div>
     <section id="sectionNav"><!-- this section containt degrees nav (l1 l2 ...)-->
-        <div>
+        <div id="divNavLevel">
             <nav>
                 <ul id="ulLevel">
                     <li><a href="index.php?level=L1">L1</a></li>
@@ -77,12 +77,30 @@
                     $matieres = selectMatiere($secureFiliere,$secureS);
                     while($matiere = $matieres->fetch_assoc())
                     {
-                ?>  <li><a href="#"><?php echo $matiere['nomm'];?></a></li>
+                ?>  <li><a href="index.php?matiere=<?php echo $matiere['nomm'];?>&amp;level=<?php echo $level;?>&amp;s=<?php echo $_GET['s'];?>&amp;filiere=<?php echo $secureFiliere;?>"><?php echo $matiere['nomm'];?></a></li>
                 <?php
                     }
                 }
                 ?>
             </ul>
+        </div>
+        <div id="divImage">
+               <?php
+               if(isset($_GET['matiere']) && isset($_GET['level']) && isset($_GET['s']) && isset($_GET['filiere'])) 
+               {
+                   $level = htmlspecialchars($_GET['level']);
+                   $filiere = htmlspecialchars($_GET['filiere']);
+                   $s = str_replace("S","",htmlspecialchars($_GET['s']));
+                   $matiere = htmlspecialchars($_GET['matiere']);
+                   $examens = selectExamen($matiere,$s);//$matiere = nomm
+
+                   while($examen = $examens->fetch_assoc())
+                   {
+                ?>
+                    <img width="600" src="view/imgs/examen/sujet/<?php echo $examen['examen'];?>" alt="">
+                <?php   }
+               }
+               ?>
         </div>
     </section>
 </body>

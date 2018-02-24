@@ -14,12 +14,14 @@
     {
         echo $_GET['var1'];
         $var = $_GET['var1'];
+        $_GET['var3'] = "said said m'bareck";
     }
 
 
     if(isset($_GET['var2']))
     {
         echo $var;
+        echo $_GET['var3'];
     }
     ?>
 </body>
