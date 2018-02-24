@@ -4,60 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>archive UNA</title>
+    <title>UNA archive</title>
+    <link rel="stylesheet" type="text/css" href="view/css/generalView.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.php?level=l1">L1</a></li>
-            <li><a href="index.php?level=l2">L2</a></li>
-            <li><a href="index.php?level=l3">L3</a></li>
-        </ul>
-    </nav>
-
-    <div id="container" style="border: 1px solid black; width: 100%;">
-    <?php
-        require_once("model/selection.php");
-        if(isset($_GET['level']))
-        {
-            echo $_GET['level'];
-            $level = htmlspecialchars($_GET['level']);
-            switch($level)
-            {
-                case "l1":
-                    $filieres = selectFiliere("L1");
-                    while($filiere = $filieres->fetch_assoc())
-                    {
-    ?>              <ul>
-                       <li><a href="view/pages/matiere.php?level=<?php echo $filiere['niveau']; ?>&amp;filiere=<?php echo $filiere['nomf'];?>"><?php echo $filiere['nomf'] . "<br>";?></a></li>
-                    </ul>
-    <?php
-                    }
-                    break;
-                case "l2":
-                    $filieres = selectFiliere("L2");
-                    while($filiere = $filieres->fetch_assoc())
-                    {
-    ?>              <ul>
-                       <li><a href="view/pages/matiere.php?level=<?php echo $filiere['niveau']; ?>&amp;filiere=<?php echo $filiere['nomf'];?>"><?php echo $filiere['nomf'] . "<br>";?></a></li>
-                    </ul>
-    <?php
-                    }
-                    break;
-                case "l3":
-                    $filieres = selectFiliere("L3");
-                    while($filiere = $filieres->fetch_assoc())
-                    {
-    ?>              <ul>
-                        <li><a href="view/pages/matiere.php?level=<?php echo $filiere['niveau']; ?>&amp;filiere=<?php echo $filiere['nomf'];?>"><?php echo $filiere['nomf'] . "<br>";?></a></li>
-                    </ul>
-    <?php
-                    }
-                break;
-                default : ;
-            }
-        }
-    ?>
+    <div>
+        <nav id="mainNav">
+            <ul>
+                <li>COURS</li>
+                <li>TD</li>
+                <li>TP</li>
+                <li>TEST</li>
+                <li>EXAMEN</li>
+            </ul>
+        </nav>
     </div>
+    <section id="sectionNav"><!-- this section containt degrees nav (l1 l2 ...)-->
+        <div>
+            <nav>
+                <ul id="ulLevel">
+                    <li>L1</li>
+                    <li>L2</li>
+                    <li>L3</li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <ul>
+                <li></li><!--php-->
+            </ul>
+        </div>
+    </section>
+    <!-- the main section for displaying image(td,td ..) -->
+    <section id="sectionContent">
+        <div>
+            <ul>
+                <li></li><!-- loading image by php -->
+            </ul>
+        </div>
+    </section>
 </body>
 </html>

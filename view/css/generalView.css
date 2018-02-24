@@ -1,0 +1,69 @@
+body,nav,section,ul,div
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    background-color: #15D6A6;
+    margin: 7px;    
+}
+
+#mainNav > ul > li
+{
+    list-style-type: none;
+    /*display: inline-block;*/
+    float: right;
+    position: relative;
+    width: 20%;
+    box-sizing: border-box;
+    margin: 7px 0px;
+    border: 1px solid;
+}
+
+#mainNav > ul /*style of principal menu*/
+{
+    display: table;
+    width: 100%;
+    background-color: #7fe;
+    border: 1px solid black;
+}
+
+#sectionNav
+{/*positionement du sectionNav*/
+    border: 1px solid black;
+    float: right;
+    position: relative;
+    width: 20%;
+    margin-top: 7px;
+}
+
+/*nav level style (l1,l2..)*/
+#ulLevel > li
+{
+    list-style-type: none;
+    float: right;
+    position: relative;
+    width: 30%;
+    margin: 7px 0px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+#ulLevel
+{
+    display: table;
+    position: relative;
+    width: 100%;
+    border: 1px solid #000000;
+}
+
+#sectionContent
+{
+    border: 1px solid black;
+    clear: right;
+    width: 70%;
+    box-sizing: border-box;
+}
+
