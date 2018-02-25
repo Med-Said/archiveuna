@@ -8,9 +8,7 @@
     <link rel="stylesheet" type="text/css" href="view/css/generalView.css">
 </head>
 <body>
-    <div>
-        <nav id="mainNav">
-            <ul>
+    <div id="divImage">
             <?php
                 require_once("model/selection.php");
                 if(isset($_GET['matiere']) && isset($_GET['level']) && isset($_GET['s']) && isset($_GET['filiere']))
@@ -63,6 +61,10 @@
                         }
                     }
             ?>
+    </div>
+    <div>
+            <nav id="mainNav">
+            <ul>
                 <li><a href="index.php?matiere=<?php echo $sMatiere;?>&amp;level=<?php echo $sLevel;?>&amp;s=<?php echo $_GET['s'];?>&amp;filiere=<?php echo $sFiliere;?>&amp;data=cours">COURS</a></li>
                 <li><a href="index.php?matiere=<?php echo $sMatiere;?>&amp;level=<?php echo $sLevel;?>&amp;s=<?php echo $_GET['s'];?>&amp;filiere=<?php echo $sFiliere;?>&amp;data=td">TD</a></li>
                 <li><a href="index.php?matiere=<?php echo $sMatiere;?>&amp;level=<?php echo $sLevel;?>&amp;s=<?php echo $_GET['s'];?>&amp;filiere=<?php echo $sFiliere;?>&amp;data=tp">TP</a></li>
@@ -143,7 +145,6 @@
                 ?>
             </ul>
         </div>
-        <div id="divImage">
                <?php
                if(isset($_GET['matiere']) && isset($_GET['level']) && isset($_GET['s']) && isset($_GET['filiere'])) 
                {
@@ -154,7 +155,6 @@
                    $examens = selectExamen($matiere,$s);//$matiere = nomm
                }
                ?>
-        </div>
     </section>
 </body>
 </html>
