@@ -11,11 +11,65 @@
     <div>
         <nav id="mainNav">
             <ul>
-                <li>COURS</li>
-                <li>TD</li>
-                <li>TP</li>
-                <li>TEST</li>
-                <li>EXAMEN</li>
+            <?php
+                require_once("model/selection.php");
+                if(isset($_GET['matiere']) && isset($_GET['level']) && isset($_GET['s']) && isset($_GET['filiere']))
+                {
+                    $sFiliere = htmlspecialchars($_GET['filiere']);
+                    $sS = str_replace("S","",htmlspecialchars($_GET['s']));
+                    $sLevel = htmlspecialchars($_GET['level']);
+                    $sMatiere = htmlspecialchars($_GET['matiere']);
+                    if(isset($_GET['data']))
+                    {
+                        $data = htmlspecialchars($_GET['data']); 
+                        switch($data)
+                        {
+                            case "cours":
+                                $cours = selectCours($sMatiere,$sS);
+                                while($cour = $cours-fetch_assoc())
+                                {
+            ?>                     <!-- loading cours -->   
+            <?php               }
+                                break;
+                            case "td" :
+                                $tds = selectTd($sMatiere,$sS);
+                                while($td = $tds->fetch_assoc())
+                                {
+            ?>                      <img width="600" src="view/imgs/td/sujet/<?php echo $td['td'];?>" alt="">
+            <?php               }
+                                break;
+                            case "tp" :
+                                $tps = selectTp($sMatiere,$sS);
+                                while($tp = $tps->fetch_assoc())
+                                {
+                                    //loading tps
+                                }
+                                break;
+                            case "test" :
+                                $tests = selectTest($sMatiere,$sS);
+                                while($test = $tests->fetch_assoc())
+                                {
+            ?>                     <img width="600" src="view/imgs/test/sujet/<?php echo $test['test'];?>" alt="">   
+            <?php               }
+                             
+                                break;
+                            case "examen" :
+                                $examens = selectExamen($sMatiere,$sS);
+                                while($examen = $examens->fetch_assoc())
+                                {
+            ?>                   <img width="600" src="view/imgs/examen/sujet/<?php echo $examen['examen'];?>" alt="">     
+            <?php               }
+                                break;
+                        }
+                    }
+            ?>
+                <li><a href="index.php?matiere=<?php echo $sMatiere;?>&amp;level=<?php echo $sLevel;?>&amp;s=<?php echo $_GET['s'];?>&amp;filiere=<?php echo $sFiliere;?>&amp;data=cours">COURS</a></li>
+                <li><a href="index.php?matiere=<?php echo $sMatiere;?>&amp;level=<?php echo $sLevel;?>&amp;s=<?php echo $_GET['s'];?>&amp;filiere=<?php echo $sFiliere;?>&amp;data=td">TD</a></li>
+                <li><a href="index.php?matiere=<?php echo $sMatiere;?>&amp;level=<?php echo $sLevel;?>&amp;s=<?php echo $_GET['s'];?>&amp;filiere=<?php echo $sFiliere;?>&amp;data=tp">TP</a></li>
+                <li><a href="index.php?matiere=<?php echo $sMatiere;?>&amp;level=<?php echo $sLevel;?>&amp;s=<?php echo $_GET['s'];?>&amp;filiere=<?php echo $sFiliere;?>&amp;data=test">TEST</a></li>
+                <li><a href="index.php?matiere=<?php echo $sMatiere;?>&amp;level=<?php echo $sLevel;?>&amp;s=<?php echo $_GET['s'];?>&amp;filiere=<?php echo $sFiliere;?>&amp;data=examen">EXAMEN</a></li>
+            <?php
+                } ?>
             </ul>
         </nav>
     </div>
@@ -33,7 +87,6 @@
             <!-- showing filieres -->
             <table>
             <?php
-                require_once("model/selection.php");
                 if(isset($_GET['level']))
                 {
                     $level = htmlspecialchars($_GET['level']);
@@ -41,12 +94,18 @@
                     {//ici on choixi les simestres selon le niveau envoiyer par la page index
                         case "L1":
                             $one = "S1"; $two = "S2";
+                            
+                            
                             break;
                         case "L2":
                             $one = "S3"; $two = "S4";
+                            
+                            
                             break;
                         case "L3";
                             $one = "S5"; $two = "S6";
+                            
+                            
                             break;
                         default: $one = ""; $two = "";
                     }
@@ -59,7 +118,7 @@
                         <td><a href="index.php?filiere=<?php echo $filiere['nomf'];?>"><?php echo $filiere['nomf']; ?></a></td>
                         <td><a href="index.php?level=<?php echo $level;?>&amp;s=<?php echo $one;?>&amp;filiere=<?php echo $filiere['nomf'];?>"><?php echo $one; ?></a></td>  
                     </tr>         
-            <?php        }
+            <?php   }
                 } 
             ?> 
             </table>
@@ -93,12 +152,6 @@
                    $s = str_replace("S","",htmlspecialchars($_GET['s']));
                    $matiere = htmlspecialchars($_GET['matiere']);
                    $examens = selectExamen($matiere,$s);//$matiere = nomm
-
-                   while($examen = $examens->fetch_assoc())
-                   {
-                ?>
-                    <img width="600" src="view/imgs/examen/sujet/<?php echo $examen['examen'];?>" alt="">
-                <?php   }
                }
                ?>
         </div>

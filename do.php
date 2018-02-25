@@ -23,6 +23,20 @@
         echo $var;
         echo $_GET['var3'];
     }
+
+
+    function FunctionName()
+    {
+
+    	$GLOBALS['do'] = "do someting";
+    }
+
+    FunctionName();
+    echo "<br>" . $GLOBALS['do'];
+
+    $var = "m'bareck";
+    unset( $GLOBALS['do']);
+    echo  $GLOBALS['do'];
     ?>
 </body>
 </html>
