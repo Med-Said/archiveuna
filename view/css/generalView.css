@@ -6,7 +6,7 @@ body,nav,section,ul,div
 
 body
 {
-    background-color: #77ffee;
+    background-color: #aaccef;
     margin: 7px;    
 }
 
@@ -87,10 +87,10 @@ body
 {
     border: 1px solid #ccbc77;
     position: absolute;
-    width: 500px;
+    width: 600px;
     box-sizing: border-box;
     margin-top: 300px;
-    margin-left: 450px;
+    margin-left: 300px;
 }
 
 img
