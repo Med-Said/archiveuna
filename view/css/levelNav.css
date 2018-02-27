@@ -8,7 +8,21 @@
     margin-left: 3px;
     border: 1px solid black;
     box-sizing: border-box;
-    border-radius: 3px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+#ulLevel > li:hover
+{
+    background: rgba(77,77,77,0.7);
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border: 1px solid white;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    transition: ease 2s border-top-left-radius;
+    transition: ease 2s border-top-right-radius;
+    transition: ease 2 background;
 }
 
 #l1
@@ -58,7 +72,7 @@ n'apparaisse que lorsqu'on clique sur le filiere
 .semestre
 {
     /*on cache les semestres*/
-   visibility: initial;
+   visibility: hidden;
 }
 
 
@@ -121,4 +135,7 @@ n'apparaisse que lorsqu'on clique sur le filiere
     border-bottom-left-radius: 0px;
     transition: ease 2s border-top-left-radius;
     transition: ease 2s border-top-right-radius;
+    border: 1px solid black;
+    background: white;
+    transition: ease 2s background-color;
 }

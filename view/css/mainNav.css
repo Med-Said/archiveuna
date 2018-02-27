@@ -1,0 +1,46 @@
+#mainNav > ul > li
+{
+    list-style-type: none;
+    /*display: inline-block;*/
+    float: right;
+    position: relative;
+    width: 20%;
+    box-sizing: border-box;
+    margin: 7px 0px;
+    border: 1px solid;
+
+    display: inline-block;
+    transition: border-radius 2s , background-color 2s;
+    border-top: 1px solid RGBa(176, 224, 224, 0.777);
+    border-bottom: 1px solid RGBa(176, 224, 224, 0.777);
+}
+
+#mainNav > ul > li:hover
+{
+    position: relative;
+    background-color : RGBa(176, 224, 224, 0.777);
+    border-radius: 7px;
+}
+
+#mainNav > ul /*style of principal menu*/
+{
+    display: table;
+    margin: 0px;
+    padding: 2px 0px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #777;
+}
+
+#mainNav > ul > li > a
+{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: black;
+    padding: 10px 0px;
+    text-align: center;
+    text-transform: uppercase;
+}

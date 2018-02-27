@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UNA archive</title>
     <link rel="stylesheet" type="text/css" href="view/css/generalView.css">
-     <link rel="stylesheet" type="text/css" href="view/css/levelNav.css">
+    <link rel="stylesheet" type="text/css" href="view/css/levelNav.css">
+    <link rel="stylesheet" type="text/css" href="view/css/matiere.css">
+    <link rel="stylesheet" type="text/css" href="view/css/mainNav.css">
+    <link rel="stylesheet" type="text/css" href="view/css/image.css">
 </head>
 <body>
     <div id="divImage">
@@ -56,7 +59,7 @@
                                 $examens = selectExamen($sMatiere,$sS);
                                 while($examen = $examens->fetch_assoc())
                                 {
-            ?>                   <img width="600" src="view/imgs/examen/sujet/<?php echo $examen['examen'];?>" alt="">     
+            ?>                   <img src="view/imgs/examen/sujet/<?php echo $examen['examen'];?>" alt="">     
             <?php               }
                                 break;
                         }
@@ -130,7 +133,7 @@
     <!-- the main section for displaying image(td,td ..) -->
     <section id="sectionContent">
         <div id="divMatiere">
-            <ul>
+            <ul class="ulMatiere">
                 <?php
                 if(isset($_GET['level']) and isset($_GET['filiere']) and isset($_GET['s']))
                 {

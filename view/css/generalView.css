@@ -7,27 +7,15 @@ body,nav,section,ul,div
 body
 {
     /*background-color: #77ffee;*/
-    margin: 7px;    
+    margin: 7px;
+    background-color : rgba(255,255,255,0.7);
 }
 
-#mainNav > ul > li
+
+#mainNav
 {
-    list-style-type: none;
-    /*display: inline-block;*/
-    float: right;
     position: relative;
-    width: 20%;
-    box-sizing: border-box;
-    margin: 7px 0px;
-    border: 1px solid;
-}
-
-#mainNav > ul /*style of principal menu*/
-{
-    display: table;
     width: 100%;
-    background-color: #7fe;
-    border: 1px solid black;
 }
 
 #sectionNav
@@ -39,42 +27,33 @@ body
     margin-top: 7px;
 }
 
-
-
-/* #sectionContent
+ #sectionContent
 {
     border: 1px solid black;
-    clear: right;
-    width: 70%;
+    width: 50%;
     box-sizing: border-box;
-    position: absolute;
-    margin-top: 70px;
-} */
-
-#divMatiere
-{
-    border: 1px snow solid;
-    position: relative;
-    width: 30%;
-    margin: 7px 0px 7px 7px;
-    border-radius: 7px;
+    margin-top: 30px;
+    /*position: absolute;
+    margin-top: 70px;*/
+    padding: 7px 0px;
 }
 
 #divImage
 {
     border: 1px solid #ccbc77;
+    width:  70%;
     position: absolute;
-    width: 600px;
     box-sizing: border-box;
-    margin-top: 300px;
-    margin-left: 300px;
+    margin-top: 400px;
+    margin-left: 70px;
 }
 
 img
 {
     position: static;
+    width: 100%;
+    position: relative;
 }
-
 
 a
 {
@@ -82,6 +61,7 @@ a
     color: black;
     font-style: italic;
 }
+
 li
 {
     list-style-type: none;
