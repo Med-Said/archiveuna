@@ -51,15 +51,14 @@ n'apparaisse que lorsqu'on clique sur le filiere
     position: relative;
     width: 95%;
     margin: 0 auto;
-    border: 1px solid black;
     border-radius: 5px;
-
+    background: rgba(77,77,77,0.7);
 }
 
 .semestre
 {
     /*on cache les semestres*/
-   display: none;
+   visibility: initial;
 }
 
 
@@ -84,23 +83,42 @@ n'apparaisse que lorsqu'on clique sur le filiere
 {
     position: relative;
     display: block;
-    width: 50%;
-    border: 1px solid green;
+    width: 100%;
     margin-bottom: 3px;
     border-radius: 3px;
+    padding: 3px;
 }
 
 .tr .semestre
 {
-    border: 1px solid black;
     position: relative;
-    width: 70px;
+    width: 23%;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 /*td contenat nomf*/
 .filiere
 {
     display: inline-block;
-    width: 100%;
+    width: 50%;
     position: relative;
+    box-sizing: border-box;
+}
+
+.filiere, .semestre
+{
+    border: 1px solid white;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.filiere:hover,.semestre:hover
+{
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    transition: ease 2s border-top-left-radius;
+    transition: ease 2s border-top-right-radius;
 }
