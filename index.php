@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UNA archive</title>
     <link rel="stylesheet" type="text/css" href="view/css/generalView.css">
+     <link rel="stylesheet" type="text/css" href="view/css/levelNav.css">
 </head>
 <body>
     <div id="divImage">
@@ -77,17 +78,17 @@
     </div>
     <section id="sectionNav"><!-- this section containt degrees nav (l1 l2 ...)-->
         <div id="divNavLevel">
-            <nav>
+            <nav id="navLevel">
                 <ul id="ulLevel">
-                    <li><a href="index.php?level=L1">L1</a></li>
+                    <li id="l1"><a href="index.php?level=L1">L1</a></li>
                     <li><a href="index.php?level=L2">L2</a></li>
                     <li><a href="index.php?level=L3">L3</a></li>
                 </ul>
             </nav>
         </div>
-        <div>
+        <div id="divTabFiliere">
             <!-- showing filieres -->
-            <table>
+            <table id="tabFiliere">
             <?php
                 if(isset($_GET['level']))
                 {
@@ -115,10 +116,10 @@
                     $filiers = selectFiliere($level);
                     while($filiere = $filiers->fetch_assoc())
                     {
-            ?>      <tr>
-                        <td><a href="index.php?level=<?php echo $level;?>&amp;s=<?php echo $two;?>&amp;filiere=<?php echo $filiere['nomf'];?>"><?php echo $two; ?></a></td>
-                        <td><a href="index.php?filiere=<?php echo $filiere['nomf'];?>"><?php echo $filiere['nomf']; ?></a></td>
-                        <td><a href="index.php?level=<?php echo $level;?>&amp;s=<?php echo $one;?>&amp;filiere=<?php echo $filiere['nomf'];?>"><?php echo $one; ?></a></td>  
+            ?>      <tr class="tr">
+                        <td class="semestre"><a href="index.php?level=<?php echo $level;?>&amp;s=<?php echo $two;?>&amp;filiere=<?php echo $filiere['nomf'];?>"><?php echo $two; ?></a></td>
+                        <td id="filiere" class="filiere"><a href="#"><?php echo $filiere['nomf']; ?></a></td>
+                        <td class="semestre"><a href="index.php?level=<?php echo $level;?>&amp;s=<?php echo $one;?>&amp;filiere=<?php echo $filiere['nomf'];?>"><?php echo $one; ?></a></td>  
                     </tr>         
             <?php   }
                 } 
@@ -156,5 +157,6 @@
                }
                ?>
     </section>
+    <script type="text/javascript" src="view/js/levelNav.js"></script>
 </body>
 </html>

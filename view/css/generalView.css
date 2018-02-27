@@ -6,7 +6,7 @@ body,nav,section,ul,div
 
 body
 {
-    background-color: #aaccef;
+    background-color: #77ffee;
     margin: 7px;    
 }
 
@@ -39,30 +39,7 @@ body
     margin-top: 7px;
 }
 
-/*nav level style (l1,l2..)*/
-#ulLevel > li
-{
-    list-style-type: none;
-    float: right;
-    position: relative;
-    width: 30%;
-    margin: 7px 0px;
-    border: 1px solid black;
-    box-sizing: border-box;
-}
 
-#ulLevel
-{
-    display: table;
-    position: relative;
-    width: 100%;
-    border: 1px solid #000000;
-}
-
-#divNavLevel
-{
-    margin: 7px;
-}
 
 /* #sectionContent
 {
@@ -96,4 +73,14 @@ body
 img
 {
     position: static;
+}
+
+
+a
+{
+    text-decoration: none;
+}
+li
+{
+    list-style-type: none;
 }

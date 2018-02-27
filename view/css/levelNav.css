@@ -1,0 +1,106 @@
+/*nav level style (l1,l2..)*/
+#ulLevel > li
+{
+    float: right;
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    margin-left: 3px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+#l1
+{
+    margin-right: 7px;
+}
+
+#ulLevel > li > a
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#ulLevel
+{
+    display: table;
+    position: relative;
+    width: 100%;
+    margin: 5px 0;
+}
+
+#divNavLevel
+{
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/*style de filiere 
+
+les semester doivent etre cache 
+n'apparaisse que lorsqu'on clique sur le filiere
+(avec javascript)
+*/
+
+#divTabFiliere
+{
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+
+.semestre
+{
+    /*on cache les semestres*/
+   display: none;
+}
+
+
+#tabFiliere
+{
+    position: relative;
+    width: 100%;
+    padding: 7px;
+}
+
+
+#tabFiliere a
+{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+/*style de lign des filiere*/
+.tr
+{
+    position: relative;
+    display: block;
+    width: 50%;
+    border: 1px solid green;
+    margin-bottom: 3px;
+    border-radius: 3px;
+}
+
+.tr .semestre
+{
+    border: 1px solid black;
+    position: relative;
+    width: 70px;
+}
+
+/*td contenat nomf*/
+.filiere
+{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
