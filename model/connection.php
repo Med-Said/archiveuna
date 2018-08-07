@@ -4,7 +4,7 @@
 function connection()
 {
     $server = "localhost";
-    $user = "medSaid";
+    $user = "root";
     $password = "";
     $db = "archiveuna";
     
