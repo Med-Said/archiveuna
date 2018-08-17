@@ -1,0 +1,30 @@
+/* hader and footer style  */
+
+/* header style */
+#headerBody{
+    width: 100%;
+    border : 1px solid blue;
+    margin-bottom: 7px;
+}
+
+.description{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+.siteLogo{
+    float: right;
+}
+
+.facLogo{
+    clear: both;
+}
+
+
+/* footer style  */
+
+.footer{
+    text-align: center;
+    color: gray;
+}

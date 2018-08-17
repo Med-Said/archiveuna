@@ -10,8 +10,13 @@
     <link rel="stylesheet" type="text/css" href="view/css/matiere.css">
     <link rel="stylesheet" type="text/css" href="view/css/mainNav.css">
     <link rel="stylesheet" type="text/css" href="view/css/image.css">
+    <link rel="stylesheet" type="text/css" href="view/css/header.css">
 </head>
 <body>
+
+    <!-- header -->
+    <?php include_once "view/pages/partials/header.php"; ?>
+
     <div id="divImage">
             <?php
                 require_once("model/selection.php");
@@ -161,5 +166,8 @@
                ?>
     </section>
     <script type="text/javascript" src="view/js/levelNav.js"></script>
+    
+    <!-- footer  -->
+    <?php include_once "view/pages/partials/footer.php" ;?>
 </body>
 </html>

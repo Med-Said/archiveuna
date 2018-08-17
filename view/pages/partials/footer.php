@@ -1,0 +1,1 @@
+<p class="footer">All right reserved ...</p>
