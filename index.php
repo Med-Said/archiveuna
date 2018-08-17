@@ -33,7 +33,7 @@
                         {
                             case "cours":
                                 $cours = selectCours($sMatiere,$sS);
-                                while($cour = $cours-fetch_assoc())
+                                while($cour = $cours->fetch_assoc())
                                 {
             ?>                     <!-- loading cours -->   
             <?php               }

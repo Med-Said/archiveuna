@@ -63,10 +63,10 @@ n'apparaisse que lorsqu'on clique sur le filiere
 #divTabFiliere
 {
     position: relative;
-    width: 95%;
-    margin: 0 auto;
     border-radius: 5px;
     background: rgba(77,77,77,0.7);
+    height: 160px;
+    overflow: auto;
 }
 
 .semestre

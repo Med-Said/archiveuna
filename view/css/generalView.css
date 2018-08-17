@@ -41,18 +41,20 @@ body
 #divImage
 {
     border: 1px solid #ccbc77;
-    width:  70%;
+    width:  80%;
     position: absolute;
     box-sizing: border-box;
     margin-top: 400px;
-    margin-left: 70px;
+    margin-left: 10%;
+    padding: 0 7px;
 }
 
-img
+#divImage img
 {
-    position: static;
     width: 100%;
     position: relative;
+    border-radius: 30px;
+    margin: 3px;
 }
 
 a
