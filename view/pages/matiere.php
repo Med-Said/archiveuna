@@ -16,7 +16,7 @@ if(isset($_GET['level']) and isset($_GET['filiere']))
     $filiere = htmlspecialchars($_GET['filiere']);
     $one = "";$two = "";
     switch($level)
-    {//ici on choixi les simestres selon le niveau envoiyer par la page index
+    {//ici on choisi les simestres selon le niveau envoiyé par la page index
         case "L1":
             $one = "S1"; $two = "S2";
             break;
